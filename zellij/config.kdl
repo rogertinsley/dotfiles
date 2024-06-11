@@ -1,0 +1,17 @@
+theme "tokyo-night"
+// default_layout "compact"
+
+keybinds {
+   move {
+    bind "Alt v" { SwitchToMode "Normal"; }
+  }
+
+  shared_except "locked" {
+    unbind "Ctrl h" // was Move, now Alt-v
+  }
+
+  shared_except "move" "locked" {
+    bind "Alt v" { SwitchToMode "move"; }
+  }
+
+ }

@@ -1,0 +1,16 @@
+# themes from https://github.com/alacritty/alacritty-theme
+
+import = ["~/.config/themes/themes/tokyo-night.toml"]
+
+[font]
+size = 16
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[window]
+# decorations = "none"
+
+[window.padding]
+x = 7
+y = 0
