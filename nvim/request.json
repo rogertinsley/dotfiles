@@ -1,0 +1,104 @@
+{
+    "contents": [
+        {
+            "role": "user",
+            "parts": [
+                {
+                    "text": "First for a reason"
+                },
+                {
+                    "text": "First Student is the largest school transportation provider in North America with more than a century of experience providing safe and reliable transportation. We work with 1,250 school districts in 39 states and 8 Canadian provinces carrying approximately five million students in 21,000 schools daily."
+                },
+                {
+                    "text": "Why join as a School Bus Driver? For many reasons"
+                },
+                {
+                    "text": "Part time work starting at  / hour"
+                },
+                {
+                    "text": "Earn more depending on experience"
+                },
+                {
+                    "text": "Medical, Dental, & Vision Benefits plus 401k Retirement Savings Plans (Benefits offered may vary by location)"
+                },
+                {
+                    "text": ",000 Bonus Opportunity*"
+                },
+                {
+                    "text": "20 hours per week guaranteed with more hours available"
+                },
+                {
+                    "text": "Work is available year-round"
+                },
+                {
+                    "text": "Paid training"
+                },
+                {
+                    "text": "Child ride along"
+                },
+                {
+                    "text": "Medical Benefits available*"
+                },
+                {
+                    "text": "About the Position"
+                },
+                {
+                    "text": "Join our team of professional drivers dedicated to getting students to and from school safely"
+                },
+                {
+                    "text": "Drivers enjoy the support of our industry leading technology to guide them through their daily routes"
+                },
+                {
+                    "text": "Prioritize vehicle maintenance by conducting pre and post trip vehicle inspections"
+                },
+                {
+                    "text": "Provide support to students by assisting with boarding and exiting the bus"
+                },
+                {
+                    "text": "Qualifications"
+                },
+                {
+                    "text": "Good verbal communication skills"
+                },
+                {
+                    "text": "At least 18 years old"
+                },
+                {
+                    "text": "Valid driver’s license for at least 2 years"
+                },
+                {
+                    "text": "Be subject to a drug screen and physical"
+                },
+                {
+                    "text": "Subject to DOT drug testing. DOT Regulation 49 CFR Part 40 does not authorize the use of Schedule I drugs, including marijuana, for any reason."
+                },
+            ]
+        }
+    ],
+    "systemInstruction":
+         "you are a summariser" 
+    ,
+    "generationConfig": {
+        "maxOutputTokens": 8192,
+        "temperature": 1,
+        "topP": 0.95,
+    },
+    "safetySettings": [
+        {
+            "category": "HARM_CATEGORY_HATE_SPEECH",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+            "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+            "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+            "category": "HARM_CATEGORY_HARASSMENT",
+            "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        }
+    ],
+}
