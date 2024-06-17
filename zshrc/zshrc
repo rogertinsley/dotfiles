@@ -64,3 +64,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . /opt/homebrew/etc/profile.d/z.sh
+
+source <(fzf --zsh)
+HISTFILE=10000
+SAVEHIST=10000
+setopt appendhistory
