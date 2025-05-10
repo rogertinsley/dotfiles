@@ -8,6 +8,7 @@ brew "htop"
 brew "lazygit"
 brew "neovim"
 brew "ollama", restart_service: :changed
+brew "starship"
 brew "stow"
 brew "tmux"
 brew "z"
