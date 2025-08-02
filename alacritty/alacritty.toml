@@ -1,5 +1,4 @@
 # themes from https://github.com/alacritty/alacritty-theme
-
 general.import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
@@ -47,5 +46,5 @@ action = "Paste"
 decorations = "none"
 
 [window.padding]
-x = 7
-y = 0
+x = 20
+y = 14 
