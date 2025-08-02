@@ -1,15 +1,14 @@
 # themes from https://github.com/alacritty/alacritty-theme
 
-general.import = ["~/.config/themes/themes/tokyo-night.toml"]
-# general.import = [
-#   "~/.config/alacritty/catppuccin-mocha.toml"
-# ]
+general.import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 18
+size = 12
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"

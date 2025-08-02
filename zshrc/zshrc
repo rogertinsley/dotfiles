@@ -15,11 +15,8 @@ alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias n='nvim'
 
-. /opt/homebrew/etc/profile.d/z.sh
-
 source <(fzf --zsh)
 HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=50000
 setopt appendhistory
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
