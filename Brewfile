@@ -34,7 +34,6 @@ brew "sd"
 brew "xh"
 
 # Shell power-ups
-brew "atuin"
 brew "direnv"
 brew "mise"
 
