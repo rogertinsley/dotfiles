@@ -33,6 +33,7 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 | Tool | Config |
 |---|---|
 | [Zsh](https://zsh.sourceforge.io) | `zshrc/` |
+| [Git](https://git-scm.com) (with [delta](https://github.com/dandavison/delta)) | `git/` |
 | [Neovim](https://neovim.io) (LazyVim) | `nvim/` |
 | [Tmux](https://github.com/tmux/tmux) | `tmux/` |
 | [Zellij](https://zellij.dev) | `zellij/` |
@@ -40,6 +41,8 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 | [Ghostty](https://ghostty.org) | `ghostty/` |
 | [Alacritty](https://alacritty.org) | `alacritty/` |
 | [k9s](https://k9scli.io) | `k9s/` |
+
+Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow on macOS.
 
 ## Homebrew
 
