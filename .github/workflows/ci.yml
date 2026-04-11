@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck and zsh
+        run: sudo apt-get update && sudo apt-get install -y shellcheck zsh
+
+      - name: shellcheck setup.sh
+        run: shellcheck setup.sh
+
+      - name: zsh syntax check
+        run: zsh -n zshrc/zshrc
+
+  macos:
+    name: macOS smoke test
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Brewfile parses
+        run: brew bundle list --file=Brewfile >/dev/null
+
+      - name: Install stow
+        run: brew install stow
+
+      - name: Stow dry run
+        run: |
+          mkdir -p "$HOME/.config"
+          stow -nv --target="$HOME/.config" \
+            alacritty ghostty git k9s nvim starship tmux zellij zshrc
