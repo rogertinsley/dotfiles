@@ -1,11 +1,11 @@
 layout {
-    cwd "/Users/roger"
+    cwd "~"
     tab name="Code" hide_floating_panes=true focus=true {
-        pane command="nvim" cwd="Desktop/code/aliro/nx" size="80%" {
+        pane command="nvim" size="80%" {
             args "."
             start_suspended false
         }
-        pane cwd="Desktop/code/aliro/nx" size="20%"
+        pane size="20%"
     }
     tab name="Docker" hide_floating_panes=true {
         pane command="lazydocker" {
@@ -13,7 +13,7 @@ layout {
         }
     }
     tab name="Git" hide_floating_panes=true {
-        pane command="lazygit" cwd="Desktop/code/aliro/nx" {
+        pane command="lazygit" {
             start_suspended false
         }
     }
