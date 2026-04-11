@@ -30,9 +30,7 @@ brew "uv"
 brew "pipx"
 
 # Docker
-brew "docker"
-brew "docker-compose"
-brew "docker-completion"
+cask "orbstack"
 
 # Cloud & DevOps
 brew "gemini-cli"
