@@ -4,7 +4,7 @@ general.import = [
 ]
 
 [terminal.shell]
-program = "/usr/bin/zsh"
+program = "/bin/zsh"
 
 [env]
 TERM = "xterm-256color"
