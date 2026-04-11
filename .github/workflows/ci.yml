@@ -41,4 +41,4 @@ jobs:
         run: |
           mkdir -p "$HOME/.config"
           stow -nv --target="$HOME/.config" \
-            alacritty ghostty git k9s nvim starship tmux zellij zshrc
+            alacritty ghostty git k9s nvim starship tmux zellij

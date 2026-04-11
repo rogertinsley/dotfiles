@@ -17,7 +17,7 @@ echo "==> Installing Homebrew packages..."
 brew bundle
 
 echo "==> Symlinking dotfiles..."
-stow .
+stow alacritty ghostty git k9s nvim starship tmux zellij
 
 echo "==> Installing tmux plugins..."
 if [ -d ~/.config/tmux/plugins/tpm ]; then
