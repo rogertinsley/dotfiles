@@ -91,7 +91,6 @@ alias gaa='git add -A'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gcm='git commit -m'
-alias pr='~/create-pr.sh'
 alias aliro='zellij --layout ~/.config/zellij/layout.kdl'
 
 # tmux helpers
