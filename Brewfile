@@ -8,6 +8,8 @@ brew "fd"
 brew "ffmpeg"
 brew "fzf"
 brew "gh"
+brew "jq"
+brew "yq"
 brew "k9s"
 brew "lazydocker"
 brew "lazygit"
@@ -17,10 +19,24 @@ brew "ripgrep"
 brew "starship"
 brew "stow"
 brew "tmux"
+brew "tldr"
 brew "zellij"
 brew "zoxide"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
+
+# Modern replacements
+brew "git-delta"
+brew "dust"
+brew "duf"
+brew "procs"
+brew "sd"
+brew "xh"
+
+# Shell power-ups
+brew "atuin"
+brew "direnv"
+brew "mise"
 
 # Languages & runtimes
 brew "go"
@@ -32,7 +48,7 @@ brew "pipx"
 # Docker
 cask "orbstack"
 
-# Cloud & DevOps
+# Cloud & AI
 brew "gemini-cli"
 brew "opencode"
 

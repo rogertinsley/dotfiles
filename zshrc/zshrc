@@ -1,3 +1,6 @@
+export HOMEBREW_PREFIX="/opt/homebrew"
+
+# Aliases
 alias cat='bat'
 alias ls='eza -lh --group-directories-first --icons'
 alias lsa='ls -a'
@@ -7,21 +10,36 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias n='nvim'
 alias o='open .'
 alias cpwd='pwd | pbcopy'
+alias du='dust'
+alias df='duf'
+alias ps='procs'
 
-HISTFILE=~/.history
+# History
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=50000
 setopt appendhistory
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_VERIFY
+setopt SHARE_HISTORY
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Ergonomics
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
+# Plugins
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source <(fzf --zsh)
 
+# Tool inits
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+eval "$(mise activate zsh)"
+eval "$(atuin init zsh)"
 
 # LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
