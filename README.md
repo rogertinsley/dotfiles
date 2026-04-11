@@ -10,26 +10,23 @@
 
 Personal dotfiles for macOS, managed with [GNU Stow](https://www.gnu.org/software/stow/). Configs are symlinked into `~/.config` via `.stowrc`.
 
-## Prerequisites
-
-Install Homebrew, then use the Brewfile to get everything else:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew bundle
-```
-
 ## Install
 
+Clone the repo and run the setup script — it handles everything:
+
 ```bash
+git clone https://github.com/rogertinsley/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 ./setup.sh
 ```
 
-Or manually:
+This will:
+1. Install Homebrew (if not already installed)
+2. Install all packages from `Brewfile`
+3. Symlink configs into `~/.config` via `stow`
+4. Install tmux plugins via TPM
 
-```bash
-stow .
-```
+After that, open a new shell and you're done. Neovim plugins install automatically on first launch.
 
 ## What's included
 
