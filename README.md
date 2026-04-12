@@ -23,7 +23,7 @@ cd ~/dotfiles
 This will:
 1. Install Homebrew (if not already installed)
 2. Install all packages from `Brewfile`
-3. Symlink configs into `~/.config` (and `~/.zshrc` into `$HOME`) via `stow`
+3. Symlink configs into `~/.config`, `~/.zshrc` into `$HOME`, and scripts into `~/.local/bin` via `stow`
 4. Install tmux plugins via TPM
 
 After that, open a new shell and you're done. Neovim plugins install automatically on first launch.
@@ -63,11 +63,28 @@ Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow 
 └── functions/         # autoloaded via fpath
     ├── g              # git status / git passthrough
     ├── gwt            # git worktree helper
+    ├── mkd            # mkdir + cd
     ├── ta             # tmux attach
     └── tn             # tmux new session
 ```
 
 To add config, drop a `.zsh` file in `configs/`. To add a function, drop a file in `functions/`. No `.zshrc` edits needed.
+
+## Scripts
+
+Custom scripts live in `bin/` and stow into `~/.local/bin` (already on `PATH`):
+
+| Script | Usage |
+|---|---|
+| `whats-in-port` | Show processes on a given port |
+| `killport` | Kill process on a given port |
+| `git-cleanup` | Delete local branches gone from remote |
+| `docker-nuke` | Prune containers, images, volumes, networks |
+| `weather` | Quick terminal weather via wttr.in |
+| `localip` | Show local and public IP |
+| `extract` | Universal archive extractor |
+
+To add a script, drop it in `bin/.local/bin/`, make it executable, and re-stow.
 
 ## Auto-update
 
