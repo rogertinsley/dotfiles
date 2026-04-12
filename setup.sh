@@ -18,7 +18,7 @@ brew bundle
 
 echo "==> Symlinking dotfiles..."
 stow --restow alacritty ghostty git k9s nvim starship tmux zellij
-stow --restow --target="$HOME" zsh
+stow --restow --target="$HOME" zsh bin
 
 echo "==> Installing tmux plugins..."
 if [ -d ~/.config/tmux/plugins/tpm ]; then

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+  echo "Usage: whats-in-port port-number" >&2
+  exit 1
+fi
+
+lsof -ni4TCP:"$1"
