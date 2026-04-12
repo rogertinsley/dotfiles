@@ -32,7 +32,7 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 
 | Tool | Config |
 |---|---|
-| [Zsh](https://zsh.sourceforge.io) | `zsh/` |
+| [Zsh](https://zsh.sourceforge.io) | `zsh/` (modular — see below) |
 | [Git](https://git-scm.com) (with [delta](https://github.com/dandavison/delta)) | `git/` |
 | [Neovim](https://neovim.io) (LazyVim) | `nvim/` |
 | [Tmux](https://github.com/tmux/tmux) | `tmux/` |
@@ -43,6 +43,35 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 | [k9s](https://k9scli.io) | `k9s/` |
 
 Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow on macOS.
+
+## Zsh structure
+
+`.zshrc` is a slim loader that sources modular config files:
+
+```
+~/.zsh/
+├── configs/           # sourced alphabetically
+│   ├── aliases.zsh
+│   ├── completion.zsh
+│   ├── environment.zsh
+│   ├── history.zsh
+│   ├── options.zsh
+│   ├── tools.zsh
+│   └── post/          # sourced after configs/
+│       ├── plugins.zsh
+│       └── update-check.zsh
+└── functions/         # autoloaded via fpath
+    ├── g              # git status / git passthrough
+    ├── gwt            # git worktree helper
+    ├── ta             # tmux attach
+    └── tn             # tmux new session
+```
+
+To add config, drop a `.zsh` file in `configs/`. To add a function, drop a file in `functions/`. No `.zshrc` edits needed.
+
+## Auto-update
+
+On shell startup (once per day), zsh checks if the dotfiles repo has new commits and prompts to pull. This can be disabled by removing `configs/post/update-check.zsh`.
 
 ## Local overrides
 
