@@ -1,5 +1,3 @@
-tap "homebrew/services"
-
 # CLI tools
 brew "bat"
 brew "btop"

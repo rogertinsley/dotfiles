@@ -17,7 +17,8 @@ echo "==> Installing Homebrew packages..."
 brew bundle
 
 echo "==> Symlinking dotfiles..."
-stow alacritty ghostty git k9s nvim starship tmux zellij
+stow --restow alacritty ghostty git k9s nvim starship tmux zellij
+stow --restow --target="$HOME" zsh
 
 echo "==> Installing tmux plugins..."
 if [ -d ~/.config/tmux/plugins/tpm ]; then
@@ -27,4 +28,4 @@ else
   ~/.config/tmux/plugins/tpm/bin/install_plugins
 fi
 
-echo "==> Done. Open a new shell to apply zsh changes."
+echo "==> Done. Restart your shell to apply changes."

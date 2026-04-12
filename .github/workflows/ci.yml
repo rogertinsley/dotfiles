@@ -23,7 +23,7 @@ jobs:
         run: shellcheck setup.sh
 
       - name: zsh syntax check
-        run: zsh -n zshrc/zshrc
+        run: zsh -n zsh/.zshrc
 
   macos:
     name: macOS smoke test
@@ -37,8 +37,11 @@ jobs:
       - name: Install stow
         run: brew install stow
 
-      - name: Stow dry run
+      - name: Stow dry run (XDG packages)
         run: |
           mkdir -p "$HOME/.config"
           stow -nv --target="$HOME/.config" \
             alacritty ghostty git k9s nvim starship tmux zellij
+
+      - name: Stow dry run (home packages)
+        run: stow -nv --target="$HOME" zsh
