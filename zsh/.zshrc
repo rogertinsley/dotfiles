@@ -45,9 +45,7 @@ setopt HIST_VERIFY
 export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export USE_GKE_GCLOUD_AUTH_PLUGIN=true
-export GOOGLE_GENAI_USE_VERTEXAI=true
-export PATH="$HOME/.local/bin:$PATH:$HOME/.lmstudio/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Safety nets
 alias rm="$HOMEBREW_PREFIX/opt/trash/bin/trash"
@@ -130,3 +128,6 @@ bindkey '^[[A' history-substring-search-up    # Up arrow
 bindkey '^[[B' history-substring-search-down  # Down arrow
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+# Local overrides (machine-specific, not checked in)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

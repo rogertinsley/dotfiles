@@ -44,6 +44,16 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 
 Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow on macOS.
 
+## Local overrides
+
+Machine-specific config (work credentials, tool paths, etc.) goes in `~/.zshrc.local`, which is sourced at the end of `.zshrc` but not tracked by this repo. For example:
+
+```bash
+# ~/.zshrc.local
+export USE_GKE_GCLOUD_AUTH_PLUGIN=true
+export PATH="$PATH:$HOME/.lmstudio/bin"
+```
+
 ## Homebrew
 
 ```bash
