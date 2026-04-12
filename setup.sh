@@ -28,4 +28,7 @@ else
   ~/.config/tmux/plugins/tpm/bin/install_plugins
 fi
 
+echo "==> Installing Neovim plugins..."
+nvim --headless "+Lazy! sync" +qa
+
 echo "==> Done. Restart your shell to apply changes."
