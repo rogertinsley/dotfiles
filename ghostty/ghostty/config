@@ -3,3 +3,12 @@ font-family = JetBrainsMono Nerd Font
 font-size = 18
 background-opacity = 0.95
 gtk-titlebar = false
+
+cursor-style = block
+cursor-style-blink = false
+confirm-close-surface = false
+resize-overlay = never
+window-padding-x = 14
+window-padding-y = 14
+mouse-scroll-multiplier = 0.95
+shell-integration-features = no-cursor,ssh-env

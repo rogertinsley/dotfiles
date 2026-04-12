@@ -1,4 +1,11 @@
-export HOMEBREW_PREFIX="/opt/homebrew"
+if [ -d "/opt/homebrew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -d "$HOME/.linuxbrew" ]; then
+  eval "$("$HOME/.linuxbrew/bin/brew" shellenv)"
+elif [ -d "/home/linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
