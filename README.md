@@ -23,7 +23,7 @@ cd ~/dotfiles
 This will:
 1. Install Homebrew (if not already installed)
 2. Install all packages from `Brewfile`
-3. Symlink configs into `~/.config` via `stow`
+3. Symlink configs into `~/.config` (and `~/.zshrc` into `$HOME`) via `stow`
 4. Install tmux plugins via TPM
 
 After that, open a new shell and you're done. Neovim plugins install automatically on first launch.
@@ -32,7 +32,7 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 
 | Tool | Config |
 |---|---|
-| [Zsh](https://zsh.sourceforge.io) | `zshrc/` |
+| [Zsh](https://zsh.sourceforge.io) | `zsh/` |
 | [Git](https://git-scm.com) (with [delta](https://github.com/dandavison/delta)) | `git/` |
 | [Neovim](https://neovim.io) (LazyVim) | `nvim/` |
 | [Tmux](https://github.com/tmux/tmux) | `tmux/` |
