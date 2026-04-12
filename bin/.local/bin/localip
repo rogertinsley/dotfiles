@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Local:  $(ipconfig getifaddr en0 2>/dev/null || hostname -I 2>/dev/null | awk '{print $1}')"
+echo "Public: $(curl -s ifconfig.me)"

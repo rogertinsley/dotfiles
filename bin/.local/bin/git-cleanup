@@ -1,0 +1,13 @@
+#!/bin/sh
+
+git fetch --prune
+
+gone=$(git branch -vv | grep ': gone]' | awk '{print $1}')
+if [ -z "$gone" ]; then
+  echo "No stale branches to clean up."
+  exit 0
+fi
+
+echo "Deleting branches:"
+echo "$gone"
+echo "$gone" | xargs git branch -D

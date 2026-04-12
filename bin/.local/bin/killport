@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+  echo "Usage: killport port-number" >&2
+  exit 1
+fi
+
+pid=$(lsof -ti4TCP:"$1")
+if [ -z "$pid" ]; then
+  echo "Nothing running on port $1" >&2
+  exit 1
+fi
+
+echo "$pid" | xargs kill -9
+echo "Killed process(es) on port $1: $pid"
