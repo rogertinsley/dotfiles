@@ -40,6 +40,7 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 | [Starship](https://starship.rs) | `starship/` |
 | [Ghostty](https://ghostty.org) | `ghostty/` |
 | [Alacritty](https://alacritty.org) | `alacritty/` |
+| [btop](https://github.com/aristocratos/btop) | `btop/` |
 | [k9s](https://k9scli.io) | `k9s/` |
 
 Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow on macOS.
