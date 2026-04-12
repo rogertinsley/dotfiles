@@ -73,7 +73,6 @@ alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # Shortcuts
 alias n='nvim'
-alias g='git'
 alias d='docker'
 alias y='yarn'
 
@@ -91,13 +90,9 @@ alias gcb='git checkout -b'
 alias gcm='git commit -m'
 alias aliro='zellij --layout ~/.config/zellij/layout.kdl'
 
-# tmux helpers
-tn() {
-  tmux new-session -s "${1:?session name required}"
-}
-ta() {
-  tmux a
-}
+# Custom functions (autoloaded from ~/.zsh/functions)
+fpath=(~/.zsh/functions $fpath)
+autoload -Uz ~/.zsh/functions/*(.:t)
 
 # kubectl completion (cached for faster startup)
 if [[ $+commands[kubectl] == 1 ]]; then

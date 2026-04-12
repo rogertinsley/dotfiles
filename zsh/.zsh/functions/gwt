@@ -1,0 +1,6 @@
+local branch="${1:?usage: gwt <branch> [base]}"
+local base="${2:-main}"
+local repo=$(basename "$(git rev-parse --show-toplevel)")
+local dir="../${repo}-worktrees/${branch}"
+
+git worktree add -b "$branch" "$dir" "$base" && cd "$dir"
