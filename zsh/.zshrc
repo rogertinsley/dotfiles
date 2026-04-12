@@ -47,7 +47,7 @@ export VISUAL='nvim'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
 export GOOGLE_GENAI_USE_VERTEXAI=true
-export PATH="$PATH:$HOME/.lmstudio/bin"
+export PATH="$HOME/.local/bin:$PATH:$HOME/.lmstudio/bin"
 
 # Safety nets
 alias rm="$HOMEBREW_PREFIX/opt/trash/bin/trash"
