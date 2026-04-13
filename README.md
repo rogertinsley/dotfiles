@@ -59,8 +59,7 @@ Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow 
 │   ├── options.zsh
 │   ├── tools.zsh
 │   └── post/          # sourced after configs/
-│       ├── plugins.zsh
-│       └── update-check.zsh
+│       └── plugins.zsh
 └── functions/         # autoloaded via fpath
     ├── g              # git status / git passthrough
     ├── gwt            # git worktree helper
@@ -69,7 +68,7 @@ Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow 
     └── tn             # tmux new session
 ```
 
-To add config, drop a `.zsh` file in `configs/`. To add a function, drop a file in `functions/`. No `.zshrc` edits needed.
+To add config, drop a `.zsh` file in `configs/`. To add a function, drop a file in `functions/`. No `.zshrc.local` edits needed.
 
 ## Scripts
 
@@ -86,10 +85,6 @@ Custom scripts live in `bin/` and stow into `~/.local/bin` (already on `PATH`):
 | `extract` | Universal archive extractor |
 
 To add a script, drop it in `bin/.local/bin/`, make it executable, and re-stow.
-
-## Auto-update
-
-On shell startup (once per day), zsh checks if the dotfiles repo has new commits and prompts to pull. This can be disabled by removing `configs/post/update-check.zsh`.
 
 ## Local overrides
 
