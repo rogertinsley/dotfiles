@@ -1,5 +1,5 @@
 # Safety nets
-alias rm="$HOMEBREW_PREFIX/opt/trash/bin/trash"
+# alias rm="$HOMEBREW_PREFIX/opt/trash/bin/trash"
 alias cp='cp -i'
 alias mv='mv -i'
 
@@ -39,4 +39,3 @@ alias gaa='git add -A'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gcm='git commit -m'
-alias aliro='zellij --layout ~/.config/zellij/layout.kdl'

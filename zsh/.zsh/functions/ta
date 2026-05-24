@@ -1,1 +1,1 @@
-tmux a
+tmux a 2>/dev/null || tmux new-session
