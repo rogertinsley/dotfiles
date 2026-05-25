@@ -1,0 +1,52 @@
+[metadata]
+name = "gh-prs"
+description = "List GitHub PRs for the current repo"
+requirements = ["gh", "jq"]
+
+[source]
+command = '''gh pr list --state open --limit 100 --json number,title,createdAt,author,labels | jq -r 'sort_by(.createdAt) | reverse | .[] | "  [32m#\(.number)[39m   \(.title) [33m@\(.author.login)[39m" + (if (.labels | length) > 0 then " " + ([.labels[] | "[35m" + .name + "[39m"] | join(" ")) else "" end)'
+'''
+output = '{strip_ansi|split:#:1|split:   :0}'
+ansi = true
+
+[ui]
+layout = "portrait"
+
+[preview]
+command = '''gh pr view '{strip_ansi|split:#:1|split:   :0}' --json number,title,body,state,headRefName,baseRefName,author,createdAt,updatedAt,mergeable,changedFiles,additions,deletions,labels,assignees,reviewDecision,headRepository,headRepositoryOwner | jq -r '
+"  " + .title,
+"  #" + (.number | tostring),
+"",
+"  [36mStatus:[39m [32m" + .state + "[39m  " + .baseRefName + " ← " + .headRefName,
+"  [36mRepo:[39m [34m" + (.headRepositoryOwner.login) + "/" + (.headRepository.name) + "[39m",
+"  [36mAuthor:[39m [33m" + .author.login + "[39m",
+"  [36mCreated:[39m " + (.createdAt | fromdateiso8601 | (now - .) | if . < 3600 then (./60|floor|tostring) + " minutes ago" elif . < 86400 then (./3600|floor|tostring) + " hours ago" else (./86400|floor|tostring) + " days ago" end),
+"  [36mUpdated:[39m " + (.updatedAt | fromdateiso8601 | (now - .) | if . < 3600 then (./60|floor|tostring) + " minutes ago" elif . < 86400 then (./3600|floor|tostring) + " hours ago" else (./86400|floor|tostring) + " days ago" end),
+(if (.labels | length) > 0 then "  [36mLabels:[39m " + ([.labels[] | "[35m" + .name + "[39m"] | join(" ")) else "" end),
+"  [36mMerge Status:[39m " + (if .mergeable == "MERGEABLE" then "[32m✓ Clean[39m" elif .mergeable == "CONFLICTING" then "[31m✗ Dirty[39m" else "[33m? Unknown[39m" end),
+"  [36mChanges:[39m " + (.changedFiles | tostring) + " files  [32m+" + (.additions | tostring) + "[39m [31m-" + (.deletions | tostring) + "[39m",
+"",
+"  [90m────────────────────────────────────────────────────────────[39m",
+"",
+(.body // "")'
+'''
+
+[actions.open]
+description = "Open the PR in the browser"
+command = "gh pr view {strip_ansi|split:#:1|split:   :0} --web"
+mode = "execute"
+
+[actions.checkout]
+description = "Checkout the PR branch locally"
+command = "gh pr checkout {strip_ansi|split:#:1|split:   :0}"
+mode = "execute"
+
+[actions.merge]
+description = "Merge the selected PR"
+command = "gh pr merge {strip_ansi|split:#:1|split:   :0}"
+mode = "execute"
+
+[actions.diff]
+description = "View the PR diff"
+command = "gh pr diff {strip_ansi|split:#:1|split:   :0} | less"
+mode = "execute"

@@ -17,7 +17,7 @@ echo "==> Installing Homebrew packages..."
 brew bundle
 
 echo "==> Symlinking dotfiles..."
-stow --restow alacritty btop ghostty git k9s nvim starship tmux zellij
+stow --restow alacritty atuin btop ghostty git k9s nvim starship television tmux zellij
 stow --restow --target="$HOME" zsh bin
 
 echo "==> Installing tmux plugins..."

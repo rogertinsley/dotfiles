@@ -1,4 +1,5 @@
 # CLI tools
+brew "atuin"
 brew "bat"
 brew "btop"
 brew "eza"
@@ -19,6 +20,7 @@ brew "ollama", restart_service: :changed
 brew "ripgrep"
 brew "starship"
 brew "stow"
+brew "television"
 brew "tmux"
 brew "tldr"
 brew "trash"

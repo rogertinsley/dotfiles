@@ -42,6 +42,8 @@ After that, open a new shell and you're done. Neovim plugins install automatical
 | [Alacritty](https://alacritty.org) | `alacritty/` |
 | [btop](https://github.com/aristocratos/btop) | `btop/` |
 | [k9s](https://k9scli.io) | `k9s/` |
+| [Television](https://github.com/alexpasmantier/television) | `television/` |
+| [Atuin](https://atuin.sh) | `atuin/` |
 
 Linux-only configs (Hyprland, etc.) live under `linux/` and are ignored by Stow on macOS.
 
