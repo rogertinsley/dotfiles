@@ -1,3 +1,4 @@
+fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
 autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
