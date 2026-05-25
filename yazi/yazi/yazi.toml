@@ -1,0 +1,19 @@
+[manager]
+sort_by = "natural"
+sort_sensitive = false
+sort_dir_first = true
+show_hidden = false
+show_symlink = true
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true, for = "unix" },
+]
+open = [
+  { run = 'open "$@"', for = "macos" },
+]
+
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "code" },
+]

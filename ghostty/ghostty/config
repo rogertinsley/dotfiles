@@ -14,4 +14,5 @@ shell-integration-features = no-cursor,ssh-env
 window-decoration = true
 macos-option-as-alt = true
 
+# Space shader overlay
 custom-shader = shaders/space.glsl

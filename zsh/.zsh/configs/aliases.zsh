@@ -27,6 +27,14 @@ alias n='nvim'
 alias d='docker'
 alias y='yarn'
 
+# Kubernetes
+alias k='kubectl'
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias kl='kubectl logs'
+alias kx='kubectx'
+alias kn='kubens'
+
 # Git
 alias gs='git status'
 alias gd='git diff'

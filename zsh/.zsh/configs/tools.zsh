@@ -5,6 +5,5 @@ eval "$(direnv hook zsh)"
 eval "$(mise activate zsh)"
 eval "$(tv init zsh)"
 
-# fzf key bindings + completion
-source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+# fzf completion only (atuin + tv handle keybindings)
 source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"

@@ -19,6 +19,7 @@ brew "neovim"
 brew "ollama", restart_service: :changed
 brew "ripgrep"
 brew "starship"
+brew "sesh"
 brew "stow"
 brew "television"
 brew "tmux"
@@ -31,7 +32,6 @@ brew "yt-dlp"
 brew "zellij"
 brew "zoxide"
 brew "zsh-autosuggestions"
-brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 
 # Modern replacements
